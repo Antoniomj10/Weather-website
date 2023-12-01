@@ -1,4 +1,4 @@
-const apiKey = '4de5b9b05ea00402efaa87dba6e0268f';
+const apiKey = '4dc9fa4b4b1800747dd2935ad674fe6c';
 const latAndLon = 'https://nominatim.openstreetmap.org/search?format=json&q=';
 const temp = document.getElementById('temp');
 const wind = document.getElementById('wind');
@@ -46,7 +46,7 @@ async function displayForecast(e) {
 
 async function getWeather(lat, lon) {
     try {
-        const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+        const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
         const res = (await fetch(url)).json();
         const data = await res;
         const date = new Date(data.list[0].dt_txt);
