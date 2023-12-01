@@ -3,43 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Weather Dashboard">
+    <link rel="stylesheet" href="./Assets/style.css">
+    <title>Weather Website</title>
 </head>
 <body>
     <header>
-        <h1>Weather Dashboard</h1>
-        <form id="search-form">
-            <input type="text" id="city-input" placeholder="Enter city name">
-            <button type="submit">Search</button>
-        </form>
+        <h1>Weather Website</h1>
     </header>
+
     <main>
-        <section id="current-weather">
-            <h2 id="city-name"></h2>
-            <p id="date"></p>
-            <img id="weather-icon" src="" alt="Weather Icon">
-            <p id="temperature"></p>
-            <p id="humidity"></p>
-            <p id="wind-speed"></p>
+        
+        <section class="search-container">
+            <h1>Search for a City:</h1>
+            <input type="text" name="state" id="search" placeholder="Columbus">
+            <button id="search-btn">Search</button>
+            <hr>
         </section>
-        <section id="forecast">
-            <!-- Display 5-day forecast here -->
-            <section id="forecast">
-                <h2>5-Day Forecast</h2>
-                <div class="forecast-card">
-                    <p id="date-1"></p>
-                    <img id="icon-1" src="" alt="Weather Icon">
-                    <p id="temperature-1"></p>
-                    <p id="wind-speed-1"></p>
-                    <p id="humidity-1"></p>
-                </div>
-            </section>
-            
+
+       
+        <section class="dashboard-container">
+            <div class="current-weather-container">
+                <h2 id="city-name"></h2>
+                <p id="temp"></p>
+                <p id="wind"></p>
+                <p id="humidity"></p>
+            </div>
+            <h2>5-Day-Forecast:</h2>
+            <div id="forecast-container">
+            </div>
         </section>
     </main>
-    <aside id="search-history">
-    </aside>
-    <script src="script.js"></script>
+    <script src="./Assets/script.js"></script>
 </body>
 </html>
