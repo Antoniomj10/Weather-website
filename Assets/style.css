@@ -11,10 +11,10 @@ body {
 }
 
 :root {
-    --primary-color: #3876b8;
-    --secondary-color: #0f0f5d;
+    --primary-color: #0076f5;
+    --secondary-color: #0000fa;
     --accent-color: #5494d8;
-    --dark-background: #2f3c4c;
+    --dark-background: #006ff7;
     --light-background: #f5f5f5;
     --text-color: #333;
 }
@@ -101,7 +101,7 @@ button:hover {
 
 .current-weather-container p, .current-weather-container h2, #forecast-container {
     margin: var(--current-weather-container-margin) 0 0 0;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--text-color);
 }
 
