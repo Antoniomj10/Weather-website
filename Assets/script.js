@@ -36,7 +36,7 @@ async function displayForecast(e) {
     try {
         if (searchValue !== '') {
             validateBtn(btnValue, searchValue);
-            const res = await fetch(`${latAndLon}${searchValue}&format=json`); // Corrected the fetch URL
+            const res = await fetch(`${latAndLon}${searchValue}&format=json`); 
             const data = await res.json();
             getWeather(data[0].lat, data[0].lon);
         }
@@ -54,7 +54,7 @@ async function getWeather(lat, lon) {
         const daysToCome = getNextFiveDays(date, data);
         cityName.textContent = `${data.city.name} (${date.toLocaleString('en-US', options)})`;
         forecastContainer.textContent = '';
-        display5DayForecast(data); // Added line to display 5-day forecast
+        display5DayForecast(data); 
         temp.textContent = `Temp: ${data.list[0].main.temp} F`;
         wind.textContent = `Wind: ${data.list[0].wind.speed} MPH`;
         humidity.textContent = `Humidity: ${data.list[0].main.humidity}%`;
@@ -65,7 +65,7 @@ async function getWeather(lat, lon) {
 }
 
 function display5DayForecast(data) {
-    forecastContainer.textContent = ''; // Clear previous forecast
+    forecastContainer.textContent = ''; 
     for (let i = 0; i < 5; i++) {
         const futureDate = new Date(data.list[i * 8].dt_txt);
         const iconCode = data.list[i * 8].weather[0].icon;
