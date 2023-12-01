@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +19,6 @@ body {
     --text-color: #333;
 }
 
-/* Header */
 header {
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
     text-align: center;
@@ -32,7 +31,6 @@ header h1 {
     font-size: 24px;
 }
 
-/* Main */
 main {
     display: grid;
     gap: 20px;
@@ -40,7 +38,6 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-/* Search Section */
 .search-container h1 {
     font-size: 24px;
     margin-left: 10px;
@@ -83,7 +80,6 @@ button:hover {
     background: #3c6b9d;
 }
 
-/* Dashboard Section */
 .dashboard-container {
     width: var(--dashboard-container-width);
     margin: 0 auto;
@@ -113,7 +109,6 @@ button:hover {
     margin-top: calc(var(--current-weather-container-margin) + 5px);
 }
 
-/* Dashboard Forecast */
 #forecast-container {
     display: grid;
     gap: 20px;
@@ -133,35 +128,29 @@ button:hover {
     font-size: 14px;
 }
 
-/* Responsive Web Design */
 @media screen and (max-width: 1200px) {
-    /* Dashboard Forecast */
     #forecast-container {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 }
 
 @media screen and (max-width: 950px) {
-    /* Dashboard Section */
     .dashboard-container {
         width: 80%;
     }
 }
 
 @media screen and (max-width: 680px) {
-    /* Main */
     main {
         grid-template-columns: 1fr;
         justify-content: center;
     }
 
-    /* Dashboard Section */
     .dashboard-container {
         width: 90%;
         text-align: center;
     }
 
-    /* Dashboard Forecast */
     #forecast-container {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         margin-left: 0;
